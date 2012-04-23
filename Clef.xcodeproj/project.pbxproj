@@ -1,0 +1,701 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11413E86154091C100F07A72 /* CLETableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11413E85154091C000F07A72 /* CLETableCellView.m */; };
+		1152369715336AA5000F25E4 /* NSNotification+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1152369615336AA5000F25E4 /* NSNotification+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		11544F801538A5D400C0529D /* CLEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11544F7F1538A5D400C0529D /* CLEViewController.m */; };
+		11544F831538A73400C0529D /* CLELibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11544F821538A73400C0529D /* CLELibraryViewController.m */; };
+		1171920C15443576007302A0 /* ArtistsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1171920B15443576007302A0 /* ArtistsView.xib */; };
+		11719212154435DD007302A0 /* AlbumsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11719211154435DD007302A0 /* AlbumsView.xib */; };
+		1171921415443617007302A0 /* TitlesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1171921315443617007302A0 /* TitlesView.xib */; };
+		1171921715443766007302A0 /* CLENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1171921615443765007302A0 /* CLENavigationController.m */; };
+		117192191544539A007302A0 /* QueueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117192181544539A007302A0 /* QueueView.xib */; };
+		1171921B154453A7007302A0 /* PlaylistView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1171921A154453A6007302A0 /* PlaylistView.xib */; };
+		1171921E154453C1007302A0 /* CLEQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1171921D154453C1007302A0 /* CLEQueueViewController.m */; };
+		11719221154453CF007302A0 /* CLEPlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11719220154453CF007302A0 /* CLEPlaylistViewController.m */; };
+		1171922B15445C04007302A0 /* ANSegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1171922415445C04007302A0 /* ANSegmentedCell.m */; };
+		1171922C15445C04007302A0 /* ANSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1171922615445C04007302A0 /* ANSegmentedControl.m */; };
+		1171922D15445C04007302A0 /* NSBezierPath+MCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1171922815445C04007302A0 /* NSBezierPath+MCAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1171922E15445C04007302A0 /* NSShadow+MCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1171922A15445C04007302A0 /* NSShadow+MCAdditions.m */; };
+		119A1BE71532EF4D007316AF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119A1BE61532EF4D007316AF /* Cocoa.framework */; };
+		119A1BF11532EF4D007316AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 119A1BEF1532EF4D007316AF /* InfoPlist.strings */; };
+		119A1BF31532EF4D007316AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 119A1BF21532EF4D007316AF /* main.m */; };
+		119A1BF71532EF4D007316AF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 119A1BF51532EF4D007316AF /* Credits.rtf */; };
+		119A1BFA1532EF4D007316AF /* CLEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 119A1BF91532EF4D007316AF /* CLEAppDelegate.m */; };
+		119A1BFD1532EF4D007316AF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 119A1BFB1532EF4D007316AF /* MainMenu.xib */; };
+		119A1C061532EF4E007316AF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119A1BE61532EF4D007316AF /* Cocoa.framework */; };
+		11A6D69B153B3B2F00F4AB16 /* CLETableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A6D69A153B3B2F00F4AB16 /* CLETableRowView.m */; };
+		11B88203153B39D40048FBD4 /* CLESplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B881FC153B39D20048FBD4 /* CLESplitView.m */; };
+		11B88205153B39D40048FBD4 /* CLEOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B88200153B39D30048FBD4 /* CLEOutlineView.m */; };
+		11B8820A153B3A850048FBD4 /* CLETextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B88209153B3A840048FBD4 /* CLETextField.m */; };
+		11BA733C1545B9E8004F6199 /* NSNumber+_BoolenNumberToText.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BA733B1545B9E8004F6199 /* NSNumber+_BoolenNumberToText.m */; };
+		11BA733F1545BA00004F6199 /* CLEPlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BA733E1545B9FF004F6199 /* CLEPlaybackViewController.m */; };
+		11BA73441545BA1F004F6199 /* CLEServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BA73411545BA1E004F6199 /* CLEServer.m */; };
+		11BA73451545BA1F004F6199 /* CLESong.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BA73431545BA1E004F6199 /* CLESong.m */; };
+		11BA734E1545BA3D004F6199 /* StateToIsNotPaused.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BA73471545BA3D004F6199 /* StateToIsNotPaused.m */; };
+		11BA734F1545BA3D004F6199 /* StateToIsNotPlaying.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BA73491545BA3D004F6199 /* StateToIsNotPlaying.m */; };
+		11BA73501545BA3D004F6199 /* StateToIsPaused.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BA734B1545BA3D004F6199 /* StateToIsPaused.m */; };
+		11BA73511545BA3D004F6199 /* StateToIsPlaying.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BA734D1545BA3D004F6199 /* StateToIsPlaying.m */; };
+		11C370F7153F5ECC00824EAE /* CLEArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C370F6153F5ECC00824EAE /* CLEArtist.m */; };
+		11C370FB153F5EDB00824EAE /* CLEAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C370FA153F5EDB00824EAE /* CLEAlbum.m */; };
+		11C3710415402A7400824EAE /* CLEAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C3710315402A7400824EAE /* CLEAlbumsViewController.m */; };
+		11C3710715402A8A00824EAE /* CLEArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C3710615402A8900824EAE /* CLEArtistsViewController.m */; };
+		11C3710A15402B0C00824EAE /* CLETitlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C3710915402B0B00824EAE /* CLETitlesViewController.m */; };
+		11DF6D1D15447F840067FBA6 /* CLETableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DF6D1C15447F840067FBA6 /* CLETableView.m */; };
+		11EDF66915380D3D00AD9941 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EDF66815380D3D00AD9941 /* INAppStoreWindow.m */; };
+		11F436121544277F00C97235 /* libmpdclient.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F436111544277F00C97235 /* libmpdclient.2.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		119A1C071532EF4E007316AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 119A1BD91532EF4D007316AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 119A1BE11532EF4D007316AF;
+			remoteInfo = Clef;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11413E84154091C000F07A72 /* CLETableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLETableCellView.h; sourceTree = "<group>"; };
+		11413E85154091C000F07A72 /* CLETableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLETableCellView.m; sourceTree = "<group>"; };
+		1152369515336AA5000F25E4 /* NSNotification+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotification+Additions.h"; sourceTree = "<group>"; };
+		1152369615336AA5000F25E4 /* NSNotification+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotification+Additions.m"; sourceTree = "<group>"; };
+		11544F7E1538A5D400C0529D /* CLEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEViewController.h; sourceTree = "<group>"; };
+		11544F7F1538A5D400C0529D /* CLEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLEViewController.m; sourceTree = "<group>"; };
+		11544F811538A73400C0529D /* CLELibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLELibraryViewController.h; sourceTree = "<group>"; };
+		11544F821538A73400C0529D /* CLELibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLELibraryViewController.m; sourceTree = "<group>"; };
+		1171920B15443576007302A0 /* ArtistsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistsView.xib; sourceTree = "<group>"; };
+		11719211154435DD007302A0 /* AlbumsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumsView.xib; sourceTree = "<group>"; };
+		1171921315443617007302A0 /* TitlesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitlesView.xib; sourceTree = "<group>"; };
+		1171921515443765007302A0 /* CLENavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLENavigationController.h; sourceTree = "<group>"; };
+		1171921615443765007302A0 /* CLENavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLENavigationController.m; sourceTree = "<group>"; };
+		117192181544539A007302A0 /* QueueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueueView.xib; sourceTree = "<group>"; };
+		1171921A154453A6007302A0 /* PlaylistView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaylistView.xib; sourceTree = "<group>"; };
+		1171921C154453C0007302A0 /* CLEQueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEQueueViewController.h; sourceTree = "<group>"; };
+		1171921D154453C1007302A0 /* CLEQueueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLEQueueViewController.m; sourceTree = "<group>"; };
+		1171921F154453CE007302A0 /* CLEPlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEPlaylistViewController.h; sourceTree = "<group>"; };
+		11719220154453CF007302A0 /* CLEPlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLEPlaylistViewController.m; sourceTree = "<group>"; };
+		1171922315445C04007302A0 /* ANSegmentedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSegmentedCell.h; sourceTree = "<group>"; };
+		1171922415445C04007302A0 /* ANSegmentedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSegmentedCell.m; sourceTree = "<group>"; };
+		1171922515445C04007302A0 /* ANSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSegmentedControl.h; sourceTree = "<group>"; };
+		1171922615445C04007302A0 /* ANSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSegmentedControl.m; sourceTree = "<group>"; };
+		1171922715445C04007302A0 /* NSBezierPath+MCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+MCAdditions.h"; sourceTree = "<group>"; };
+		1171922815445C04007302A0 /* NSBezierPath+MCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+MCAdditions.m"; sourceTree = "<group>"; };
+		1171922915445C04007302A0 /* NSShadow+MCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSShadow+MCAdditions.h"; sourceTree = "<group>"; };
+		1171922A15445C04007302A0 /* NSShadow+MCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSShadow+MCAdditions.m"; sourceTree = "<group>"; };
+		119A1BE21532EF4D007316AF /* Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clef.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		119A1BE61532EF4D007316AF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		119A1BE91532EF4D007316AF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		119A1BEA1532EF4D007316AF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		119A1BEB1532EF4D007316AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		119A1BEE1532EF4D007316AF /* Clef-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Clef-Info.plist"; sourceTree = "<group>"; };
+		119A1BF01532EF4D007316AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		119A1BF21532EF4D007316AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		119A1BF41532EF4D007316AF /* Clef-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Clef-Prefix.pch"; sourceTree = "<group>"; };
+		119A1BF61532EF4D007316AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		119A1BF81532EF4D007316AF /* CLEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLEAppDelegate.h; sourceTree = "<group>"; };
+		119A1BF91532EF4D007316AF /* CLEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLEAppDelegate.m; sourceTree = "<group>"; };
+		119A1BFC1532EF4D007316AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		119A1C031532EF4E007316AF /* ClefTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClefTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11A6D699153B3B2F00F4AB16 /* CLETableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLETableRowView.h; sourceTree = "<group>"; };
+		11A6D69A153B3B2F00F4AB16 /* CLETableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLETableRowView.m; sourceTree = "<group>"; };
+		11B881FB153B39D20048FBD4 /* CLESplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLESplitView.h; sourceTree = "<group>"; };
+		11B881FC153B39D20048FBD4 /* CLESplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLESplitView.m; sourceTree = "<group>"; };
+		11B881FF153B39D30048FBD4 /* CLEOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEOutlineView.h; sourceTree = "<group>"; };
+		11B88200153B39D30048FBD4 /* CLEOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLEOutlineView.m; sourceTree = "<group>"; };
+		11B88208153B3A840048FBD4 /* CLETextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLETextField.h; sourceTree = "<group>"; };
+		11B88209153B3A840048FBD4 /* CLETextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLETextField.m; sourceTree = "<group>"; };
+		11BA733A1545B9E8004F6199 /* NSNumber+_BoolenNumberToText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+_BoolenNumberToText.h"; sourceTree = "<group>"; };
+		11BA733B1545B9E8004F6199 /* NSNumber+_BoolenNumberToText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+_BoolenNumberToText.m"; sourceTree = "<group>"; };
+		11BA733D1545B9FF004F6199 /* CLEPlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEPlaybackViewController.h; sourceTree = "<group>"; };
+		11BA733E1545B9FF004F6199 /* CLEPlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLEPlaybackViewController.m; sourceTree = "<group>"; };
+		11BA73401545BA1E004F6199 /* CLEServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEServer.h; sourceTree = "<group>"; };
+		11BA73411545BA1E004F6199 /* CLEServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLEServer.m; sourceTree = "<group>"; };
+		11BA73421545BA1E004F6199 /* CLESong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLESong.h; sourceTree = "<group>"; };
+		11BA73431545BA1E004F6199 /* CLESong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLESong.m; sourceTree = "<group>"; };
+		11BA73461545BA3D004F6199 /* StateToIsNotPaused.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateToIsNotPaused.h; sourceTree = "<group>"; };
+		11BA73471545BA3D004F6199 /* StateToIsNotPaused.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateToIsNotPaused.m; sourceTree = "<group>"; };
+		11BA73481545BA3D004F6199 /* StateToIsNotPlaying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateToIsNotPlaying.h; sourceTree = "<group>"; };
+		11BA73491545BA3D004F6199 /* StateToIsNotPlaying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateToIsNotPlaying.m; sourceTree = "<group>"; };
+		11BA734A1545BA3D004F6199 /* StateToIsPaused.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateToIsPaused.h; sourceTree = "<group>"; };
+		11BA734B1545BA3D004F6199 /* StateToIsPaused.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateToIsPaused.m; sourceTree = "<group>"; };
+		11BA734C1545BA3D004F6199 /* StateToIsPlaying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateToIsPlaying.h; sourceTree = "<group>"; };
+		11BA734D1545BA3D004F6199 /* StateToIsPlaying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateToIsPlaying.m; sourceTree = "<group>"; };
+		11C370F5153F5ECC00824EAE /* CLEArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEArtist.h; sourceTree = "<group>"; };
+		11C370F6153F5ECC00824EAE /* CLEArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLEArtist.m; sourceTree = "<group>"; };
+		11C370F9153F5EDB00824EAE /* CLEAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEAlbum.h; sourceTree = "<group>"; };
+		11C370FA153F5EDB00824EAE /* CLEAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLEAlbum.m; sourceTree = "<group>"; };
+		11C3710215402A7400824EAE /* CLEAlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEAlbumsViewController.h; sourceTree = "<group>"; };
+		11C3710315402A7400824EAE /* CLEAlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLEAlbumsViewController.m; sourceTree = "<group>"; };
+		11C3710515402A8800824EAE /* CLEArtistsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEArtistsViewController.h; sourceTree = "<group>"; };
+		11C3710615402A8900824EAE /* CLEArtistsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLEArtistsViewController.m; sourceTree = "<group>"; };
+		11C3710815402B0B00824EAE /* CLETitlesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLETitlesViewController.h; sourceTree = "<group>"; };
+		11C3710915402B0B00824EAE /* CLETitlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLETitlesViewController.m; sourceTree = "<group>"; };
+		11DF6D1B15447F840067FBA6 /* CLETableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLETableView.h; sourceTree = "<group>"; };
+		11DF6D1C15447F840067FBA6 /* CLETableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLETableView.m; sourceTree = "<group>"; };
+		11EDF66715380D3D00AD9941 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
+		11EDF66815380D3D00AD9941 /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
+		11F436111544277F00C97235 /* libmpdclient.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmpdclient.2.dylib; path = usr/local/lib/libmpdclient.2.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		119A1BDF1532EF4D007316AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11F436121544277F00C97235 /* libmpdclient.2.dylib in Frameworks */,
+				119A1BE71532EF4D007316AF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		119A1BFF1532EF4E007316AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				119A1C061532EF4E007316AF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		113C02B31536F197008FBA1A /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				11BA73461545BA3D004F6199 /* StateToIsNotPaused.h */,
+				11BA73471545BA3D004F6199 /* StateToIsNotPaused.m */,
+				11BA73481545BA3D004F6199 /* StateToIsNotPlaying.h */,
+				11BA73491545BA3D004F6199 /* StateToIsNotPlaying.m */,
+				11BA734A1545BA3D004F6199 /* StateToIsPaused.h */,
+				11BA734B1545BA3D004F6199 /* StateToIsPaused.m */,
+				11BA734C1545BA3D004F6199 /* StateToIsPlaying.h */,
+				11BA734D1545BA3D004F6199 /* StateToIsPlaying.m */,
+			);
+			name = Transformers;
+			sourceTree = "<group>";
+		};
+		1152368D15336743000F25E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				11BA733D1545B9FF004F6199 /* CLEPlaybackViewController.h */,
+				11BA733E1545B9FF004F6199 /* CLEPlaybackViewController.m */,
+				11544F7E1538A5D400C0529D /* CLEViewController.h */,
+				11544F7F1538A5D400C0529D /* CLEViewController.m */,
+				1171921515443765007302A0 /* CLENavigationController.h */,
+				1171921615443765007302A0 /* CLENavigationController.m */,
+				11544F811538A73400C0529D /* CLELibraryViewController.h */,
+				11544F821538A73400C0529D /* CLELibraryViewController.m */,
+				11C3710515402A8800824EAE /* CLEArtistsViewController.h */,
+				11C3710615402A8900824EAE /* CLEArtistsViewController.m */,
+				11C3710215402A7400824EAE /* CLEAlbumsViewController.h */,
+				11C3710315402A7400824EAE /* CLEAlbumsViewController.m */,
+				11C3710815402B0B00824EAE /* CLETitlesViewController.h */,
+				11C3710915402B0B00824EAE /* CLETitlesViewController.m */,
+				119A1BF81532EF4D007316AF /* CLEAppDelegate.h */,
+				119A1BF91532EF4D007316AF /* CLEAppDelegate.m */,
+				1171921C154453C0007302A0 /* CLEQueueViewController.h */,
+				1171921D154453C1007302A0 /* CLEQueueViewController.m */,
+				1171921F154453CE007302A0 /* CLEPlaylistViewController.h */,
+				11719220154453CF007302A0 /* CLEPlaylistViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1152368E15336752000F25E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11BA73401545BA1E004F6199 /* CLEServer.h */,
+				11BA73411545BA1E004F6199 /* CLEServer.m */,
+				11BA73421545BA1E004F6199 /* CLESong.h */,
+				11BA73431545BA1E004F6199 /* CLESong.m */,
+				11C370F5153F5ECC00824EAE /* CLEArtist.h */,
+				11C370F6153F5ECC00824EAE /* CLEArtist.m */,
+				11C370F9153F5EDB00824EAE /* CLEAlbum.h */,
+				11C370FA153F5EDB00824EAE /* CLEAlbum.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1152368F15336762000F25E4 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				119A1BED1532EF4D007316AF /* Supporting Files */,
+			);
+			name = Ressources;
+			sourceTree = "<group>";
+		};
+		1152369015336788000F25E4 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				119A1BFB1532EF4D007316AF /* MainMenu.xib */,
+				1171920B15443576007302A0 /* ArtistsView.xib */,
+				11719211154435DD007302A0 /* AlbumsView.xib */,
+				1171921315443617007302A0 /* TitlesView.xib */,
+				117192181544539A007302A0 /* QueueView.xib */,
+				1171921A154453A6007302A0 /* PlaylistView.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
+		1152369415336A7D000F25E4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1152369515336AA5000F25E4 /* NSNotification+Additions.h */,
+				1152369615336AA5000F25E4 /* NSNotification+Additions.m */,
+				11BA733A1545B9E8004F6199 /* NSNumber+_BoolenNumberToText.h */,
+				11BA733B1545B9E8004F6199 /* NSNumber+_BoolenNumberToText.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		1171922215445BE3007302A0 /* Thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				1171922315445C04007302A0 /* ANSegmentedCell.h */,
+				1171922415445C04007302A0 /* ANSegmentedCell.m */,
+				1171922515445C04007302A0 /* ANSegmentedControl.h */,
+				1171922615445C04007302A0 /* ANSegmentedControl.m */,
+				1171922715445C04007302A0 /* NSBezierPath+MCAdditions.h */,
+				1171922815445C04007302A0 /* NSBezierPath+MCAdditions.m */,
+				1171922915445C04007302A0 /* NSShadow+MCAdditions.h */,
+				1171922A15445C04007302A0 /* NSShadow+MCAdditions.m */,
+				11EDF66715380D3D00AD9941 /* INAppStoreWindow.h */,
+				11EDF66815380D3D00AD9941 /* INAppStoreWindow.m */,
+			);
+			name = Thirdparty;
+			sourceTree = "<group>";
+		};
+		119A1BD71532EF4D007316AF = {
+			isa = PBXGroup;
+			children = (
+				119A1BEC1532EF4D007316AF /* Clef */,
+				119A1BE51532EF4D007316AF /* Frameworks */,
+				119A1BE31532EF4D007316AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		119A1BE31532EF4D007316AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				119A1BE21532EF4D007316AF /* Clef.app */,
+				119A1C031532EF4E007316AF /* ClefTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		119A1BE51532EF4D007316AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				119A1BE61532EF4D007316AF /* Cocoa.framework */,
+				119A1BE81532EF4D007316AF /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		119A1BE81532EF4D007316AF /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11F436111544277F00C97235 /* libmpdclient.2.dylib */,
+				119A1BE91532EF4D007316AF /* AppKit.framework */,
+				119A1BEA1532EF4D007316AF /* CoreData.framework */,
+				119A1BEB1532EF4D007316AF /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		119A1BEC1532EF4D007316AF /* Clef */ = {
+			isa = PBXGroup;
+			children = (
+				1171922215445BE3007302A0 /* Thirdparty */,
+				11B88207153B39D70048FBD4 /* subclasses */,
+				113C02B31536F197008FBA1A /* Transformers */,
+				1152369415336A7D000F25E4 /* Categories */,
+				1152369015336788000F25E4 /* Xibs */,
+				1152368E15336752000F25E4 /* Models */,
+				1152368D15336743000F25E4 /* Controller */,
+				1152368F15336762000F25E4 /* Ressources */,
+			);
+			path = Clef;
+			sourceTree = "<group>";
+		};
+		119A1BED1532EF4D007316AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				119A1BEE1532EF4D007316AF /* Clef-Info.plist */,
+				119A1BEF1532EF4D007316AF /* InfoPlist.strings */,
+				119A1BF21532EF4D007316AF /* main.m */,
+				119A1BF41532EF4D007316AF /* Clef-Prefix.pch */,
+				119A1BF51532EF4D007316AF /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11B88207153B39D70048FBD4 /* subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				11A6D699153B3B2F00F4AB16 /* CLETableRowView.h */,
+				11A6D69A153B3B2F00F4AB16 /* CLETableRowView.m */,
+				11B88208153B3A840048FBD4 /* CLETextField.h */,
+				11B88209153B3A840048FBD4 /* CLETextField.m */,
+				11B881FB153B39D20048FBD4 /* CLESplitView.h */,
+				11B881FC153B39D20048FBD4 /* CLESplitView.m */,
+				11B881FF153B39D30048FBD4 /* CLEOutlineView.h */,
+				11B88200153B39D30048FBD4 /* CLEOutlineView.m */,
+				11413E84154091C000F07A72 /* CLETableCellView.h */,
+				11413E85154091C000F07A72 /* CLETableCellView.m */,
+				11DF6D1B15447F840067FBA6 /* CLETableView.h */,
+				11DF6D1C15447F840067FBA6 /* CLETableView.m */,
+			);
+			name = subclasses;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		119A1BE11532EF4D007316AF /* Clef */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 119A1C141532EF4E007316AF /* Build configuration list for PBXNativeTarget "Clef" */;
+			buildPhases = (
+				119A1BDE1532EF4D007316AF /* Sources */,
+				119A1BDF1532EF4D007316AF /* Frameworks */,
+				119A1BE01532EF4D007316AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Clef;
+			productName = Clef;
+			productReference = 119A1BE21532EF4D007316AF /* Clef.app */;
+			productType = "com.apple.product-type.application";
+		};
+		119A1C021532EF4E007316AF /* ClefTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 119A1C171532EF4E007316AF /* Build configuration list for PBXNativeTarget "ClefTests" */;
+			buildPhases = (
+				119A1BFE1532EF4E007316AF /* Sources */,
+				119A1BFF1532EF4E007316AF /* Frameworks */,
+				119A1C001532EF4E007316AF /* Resources */,
+				119A1C011532EF4E007316AF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				119A1C081532EF4E007316AF /* PBXTargetDependency */,
+			);
+			name = ClefTests;
+			productName = ClefTests;
+			productReference = 119A1C031532EF4E007316AF /* ClefTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		119A1BD91532EF4D007316AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "IBM Deutschland GmbH";
+			};
+			buildConfigurationList = 119A1BDC1532EF4D007316AF /* Build configuration list for PBXProject "Clef" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 119A1BD71532EF4D007316AF;
+			productRefGroup = 119A1BE31532EF4D007316AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				119A1BE11532EF4D007316AF /* Clef */,
+				119A1C021532EF4E007316AF /* ClefTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		119A1BE01532EF4D007316AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				119A1BF11532EF4D007316AF /* InfoPlist.strings in Resources */,
+				119A1BF71532EF4D007316AF /* Credits.rtf in Resources */,
+				119A1BFD1532EF4D007316AF /* MainMenu.xib in Resources */,
+				1171920C15443576007302A0 /* ArtistsView.xib in Resources */,
+				11719212154435DD007302A0 /* AlbumsView.xib in Resources */,
+				1171921415443617007302A0 /* TitlesView.xib in Resources */,
+				117192191544539A007302A0 /* QueueView.xib in Resources */,
+				1171921B154453A7007302A0 /* PlaylistView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		119A1C001532EF4E007316AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		119A1C011532EF4E007316AF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		119A1BDE1532EF4D007316AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				119A1BF31532EF4D007316AF /* main.m in Sources */,
+				119A1BFA1532EF4D007316AF /* CLEAppDelegate.m in Sources */,
+				1152369715336AA5000F25E4 /* NSNotification+Additions.m in Sources */,
+				11EDF66915380D3D00AD9941 /* INAppStoreWindow.m in Sources */,
+				11544F801538A5D400C0529D /* CLEViewController.m in Sources */,
+				11544F831538A73400C0529D /* CLELibraryViewController.m in Sources */,
+				11B88203153B39D40048FBD4 /* CLESplitView.m in Sources */,
+				11B88205153B39D40048FBD4 /* CLEOutlineView.m in Sources */,
+				11B8820A153B3A850048FBD4 /* CLETextField.m in Sources */,
+				11A6D69B153B3B2F00F4AB16 /* CLETableRowView.m in Sources */,
+				11C370F7153F5ECC00824EAE /* CLEArtist.m in Sources */,
+				11C370FB153F5EDB00824EAE /* CLEAlbum.m in Sources */,
+				11C3710415402A7400824EAE /* CLEAlbumsViewController.m in Sources */,
+				11C3710715402A8A00824EAE /* CLEArtistsViewController.m in Sources */,
+				11C3710A15402B0C00824EAE /* CLETitlesViewController.m in Sources */,
+				11413E86154091C100F07A72 /* CLETableCellView.m in Sources */,
+				1171921715443766007302A0 /* CLENavigationController.m in Sources */,
+				1171921E154453C1007302A0 /* CLEQueueViewController.m in Sources */,
+				11719221154453CF007302A0 /* CLEPlaylistViewController.m in Sources */,
+				1171922B15445C04007302A0 /* ANSegmentedCell.m in Sources */,
+				1171922C15445C04007302A0 /* ANSegmentedControl.m in Sources */,
+				1171922D15445C04007302A0 /* NSBezierPath+MCAdditions.m in Sources */,
+				1171922E15445C04007302A0 /* NSShadow+MCAdditions.m in Sources */,
+				11DF6D1D15447F840067FBA6 /* CLETableView.m in Sources */,
+				11BA733C1545B9E8004F6199 /* NSNumber+_BoolenNumberToText.m in Sources */,
+				11BA733F1545BA00004F6199 /* CLEPlaybackViewController.m in Sources */,
+				11BA73441545BA1F004F6199 /* CLEServer.m in Sources */,
+				11BA73451545BA1F004F6199 /* CLESong.m in Sources */,
+				11BA734E1545BA3D004F6199 /* StateToIsNotPaused.m in Sources */,
+				11BA734F1545BA3D004F6199 /* StateToIsNotPlaying.m in Sources */,
+				11BA73501545BA3D004F6199 /* StateToIsPaused.m in Sources */,
+				11BA73511545BA3D004F6199 /* StateToIsPlaying.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		119A1BFE1532EF4E007316AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		119A1C081532EF4E007316AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 119A1BE11532EF4D007316AF /* Clef */;
+			targetProxy = 119A1C071532EF4E007316AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		119A1BEF1532EF4D007316AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				119A1BF01532EF4D007316AF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		119A1BF51532EF4D007316AF /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				119A1BF61532EF4D007316AF /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		119A1BFB1532EF4D007316AF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				119A1BFC1532EF4D007316AF /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		119A1C121532EF4E007316AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_SSE42_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		119A1C131532EF4E007316AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_SSE42_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		119A1C151532EF4E007316AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Clef/Clef-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "";
+				INFOPLIST_FILE = "Clef/Clef-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Code/libmpdclient\"",
+					/opt/local/lib,
+					"\"$(SRCROOT)/libmpdclient/.libs\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		119A1C161532EF4E007316AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Clef/Clef-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "";
+				INFOPLIST_FILE = "Clef/Clef-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Code/libmpdclient\"",
+					/opt/local/lib,
+					"\"$(SRCROOT)/libmpdclient/.libs\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		119A1C181532EF4E007316AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Clef.app/Contents/MacOS/Clef";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Clef/Clef-Prefix.pch";
+				INFOPLIST_FILE = "ClefTests/ClefTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		119A1C191532EF4E007316AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Clef.app/Contents/MacOS/Clef";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Clef/Clef-Prefix.pch";
+				INFOPLIST_FILE = "ClefTests/ClefTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		119A1BDC1532EF4D007316AF /* Build configuration list for PBXProject "Clef" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				119A1C121532EF4E007316AF /* Debug */,
+				119A1C131532EF4E007316AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		119A1C141532EF4E007316AF /* Build configuration list for PBXNativeTarget "Clef" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				119A1C151532EF4E007316AF /* Debug */,
+				119A1C161532EF4E007316AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		119A1C171532EF4E007316AF /* Build configuration list for PBXNativeTarget "ClefTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				119A1C181532EF4E007316AF /* Debug */,
+				119A1C191532EF4E007316AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 119A1BD91532EF4D007316AF /* Project object */;
+}
