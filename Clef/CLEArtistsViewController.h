@@ -8,7 +8,6 @@
 #import "CLEViewController.h"
 
 @interface CLEArtistsViewController : CLEViewController <NSTableViewDelegate, NSTableViewDataSource>{
-    IBOutlet NSButton *next;
     NSArray *artists;
     IBOutlet NSTableView *tableView;
     
@@ -16,6 +15,4 @@
 }
 - (IBAction)next:(id)sender;
 - (void)handleFetchedLibrary;
-- (void)handleDoubleClickOnTableRow;
-
 @end

@@ -38,41 +38,45 @@
 }
 
 // Use this to push an arbitrary viewcontroller on the childViewControllerStack and show its view
-- (void)pushViewController:(CLEViewController *)newTopViewController animated:(BOOL)animated {
-    NSLog(@"Pushing viewController %@ on the childViewControllerStack", newTopViewController);
-    
+- (void)pushViewController:(CLEViewController *)newTopViewController animated:(BOOL)animated {    
     CLEViewController *oldTopViewController = [childViewControllerStack lastObject];    
     [childViewControllerStack addObject:newTopViewController];
 
+    // Give old controller chance to prepare things for successor
+    [oldTopViewController willBecomeInactive];      
+    [newTopViewController willBecomeActive];
+
     newTopViewController.view.frame = [[self parentView] bounds];
-    [oldTopViewController viewWillDisappear];
-    [newTopViewController viewWillAppear];
-    
     [[self parentView]  addSubview:newTopViewController.view];
     [[oldTopViewController view] removeFromSuperview];
+
+    [oldTopViewController didBecomeInactive];
+    [newTopViewController didBecomeActive];
 }
 
 // Use this to push a preallocated viewcontroller from the childViewControllers on the childViewControllerStack;
 - (void)pushPreallocatedViewController:(NSString*)identifier animated:(BOOL) animated{
-    NSLog(@"Pushing preallocted viewcontroller identified by %@ on the childViewControllerStack", identifier);
     [self pushViewController:[childViewControllers valueForKey:identifier] animated:animated];
 }
 
 
+
 - (void)popViewControllerAnimated:(BOOL)animated {
     NSAssert(childViewControllers.count > 1, @"I'm sorry Dave, I cannot do that.");
-
-    CLEViewController *oldTopViewController = [childViewControllerStack lastObject];
+    CLEViewController *oldTopViewController = [childViewControllerStack lastObject];    
     CLEViewController *newTopViewController = [childViewControllerStack objectAtIndex:([childViewControllerStack count]-2)];
     
+    // Give old controller chance to prepare things for successor
+    [oldTopViewController willBecomeInactive];
+    [newTopViewController willBecomeActive];
+    
     newTopViewController.view.frame = [[self parentView] bounds];
-
-    [oldTopViewController viewWillDisappear];
-    [newTopViewController viewWillAppear];
-
     [[self parentView] addSubview:newTopViewController.view];
     [oldTopViewController.view removeFromSuperview];
     [childViewControllerStack removeLastObject];
+    
+    [oldTopViewController didBecomeInactive];
+    [newTopViewController didBecomeActive];
 }
 
 - (NSView*)topView {
@@ -100,12 +104,9 @@
     }
 }
 
-- (void) viewWillAppear {
-    
-}
-- (void) viewWillDisappear {
-    
-}
-
-
+// Up to subclasses to implement those actions that are called during push and pop
+- (void) willBecomeActive {};
+- (void) didBecomeActive  {};
+- (void) willBecomeInactive {};
+- (void) didBecomeInactive {};
 @end

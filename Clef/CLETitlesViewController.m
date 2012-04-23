@@ -17,13 +17,12 @@
 }
 
 
-- (void) viewWillAppear {
-    NSLog(@"titlesview will appear, reloading for %@", [(CLELibraryViewController*)partentViewController currentAlbum]);
+- (void) willBecomeActive {
+    NSLog(@"TitlesView will become active. Geting selected album from parentViewController %@", [(CLELibraryViewController*)partentViewController currentAlbum]);
     NSArray *songsUnsorted = [[[(CLELibraryViewController*)partentViewController currentAlbum] songs] allValues];
     
     [self setValue:[songsUnsorted sortedArrayUsingSelector:@selector(compareWithAnotherSong:)] forKey:@"songs"];
     [tableView reloadData];
-    
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
@@ -40,8 +39,6 @@
     CLESong *song = [songs  objectAtIndex:row];
     CLETableCellView *result = NULL;
     
-    
-    
     if ([[tableColumn identifier] isEqualToString:@"mainColumn"]) {
         result = [atableView makeViewWithIdentifier:@"rowMainView" owner:self];
         
@@ -51,11 +48,8 @@
             
         }
         result.textField.stringValue = song.title;
-    }
-    
-    
-    // return the result.
-    
+    }    
     return result;
 }
+
 @end

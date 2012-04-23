@@ -22,18 +22,13 @@
     [(CLELibraryViewController*)self.partentViewController pushPreallocatedViewController:@"titlesViewController" animated:NO];
 }
 
-- (void) viewWillAppear {
-    NSLog(@"albumsview will appear, reloading for %@", [(CLELibraryViewController*)partentViewController currentArtist]);
+- (void) willBecomeActive {
+    
+    NSLog(@"AlbumsView will become active. Geting selected artist from parentViewController %@", [(CLELibraryViewController*)partentViewController currentArtist]);
     NSArray *albumsUnsorted = [[[(CLELibraryViewController*)partentViewController currentArtist] albums] allValues];
     
     [self setValue:[albumsUnsorted sortedArrayUsingSelector:@selector(compareWithAnotherAlbum:)] forKey:@"albums"];
     [tableView reloadData];
-
-}
-
-- (void) viewWillDisappear {
-    NSLog(@"albumview will disappear, saving current album %@", [albums objectAtIndex:[tableView selectedRow]] );
-    [(CLELibraryViewController*)partentViewController setCurrentAlbum:[albums objectAtIndex:[tableView selectedRow]]];
 }
 
 
@@ -75,10 +70,24 @@
     return result;
 }
 
+
+
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
-    if (tableView.selectedRow) {
-        NSLog(@"selected: %@", [albums objectAtIndex:[tableView selectedRow]]);
+
+    // Best way I know to check if a tablerow was selected
+    if ([tableView numberOfSelectedRows]) {
+
+        // Save album to parentviewcontroller
+        NSLog(@"AlbumsView will become inactive. Saving selected album to parentViewController %@", [albums objectAtIndex:[tableView selectedRow]]);
+        [(CLELibraryViewController*)partentViewController setCurrentAlbum:[albums objectAtIndex:[tableView selectedRow]]];
+        
+        // Push titlesViewController
         [partentViewController pushPreallocatedViewController:@"titlesViewController" animated:NO];
     }
 }
+
+
+
+
+
 @end
