@@ -13,7 +13,7 @@
 #import "CLETableRowView.h"
 @implementation CLEArtistsViewController
 
-
+#pragma mark - Initialization
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -22,39 +22,28 @@
     }
     return self;
 }
-        
-
-- (IBAction)next:(id)sender {
-    [(CLELibraryViewController*)self.partentViewController pushPreallocatedViewController:@"albumsViewController" animated:NO];
-}
-
-
-- (void)handleFetchedLibrary {
-    NSLog(@"Handling fetched library");
-    
+      
+- (void)handleFetchedLibrary {    
     NSArray *artistsUnsorted = [[[(CLEAppDelegate*)[NSApp delegate] mpdServer] artists] allValues];
     
     [self setValue:[artistsUnsorted sortedArrayUsingSelector:@selector(compareWithAnotherArtist:)] forKey:@"artists"];
     [tableView reloadData];
 }
 
-
+# pragma mark - TableView delegate methods
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
     return [artists count];
 }
 
 -(CLETableRowView *)tableView:(NSTableView *)atableView rowViewForItem:(id)item {
     // Until we find a better way to allways highlight rows
-    NSLog(@"jere");
     return [[CLETableRowView alloc] init];
 }
 
 - (NSView *)tableView:(NSTableView *)atableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     CLEArtist *artist = [artists  objectAtIndex:row];
     CLETableCellView *result = NULL;
-    
-
-    
+        
     if ([[tableColumn identifier] isEqualToString:@"mainColumn"]) {
         result = [atableView makeViewWithIdentifier:@"rowMainView" owner:self];
     
@@ -64,39 +53,22 @@
         
         }
         result.textField.stringValue = artist.name;
-    } else {
-        result = [atableView makeViewWithIdentifier:@"rowMetaView" owner:self];
-        
-        if (result == nil) {
-            result = [[CLETableCellView alloc] initWithFrame:[atableView frame]];
-            result.identifier = @"rowMetaView";        
-            
-        }
-        result.textField.stringValue = [NSString stringWithFormat:@"%ld albums", artist.albums.count];
-
     }
-    
-    
-    // return the result.
-    
     return result;
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
-    if (tableView.selectedRow) {
-        NSLog(@"selected: %@", [artists objectAtIndex:[tableView selectedRow]]);
+
+    // Best way I know to check if a tablerow was selected
+    if ([tableView numberOfSelectedRows]) {
+            
+        // Save album to parentviewcontroller
+        NSLog(@"ArtistsView will become inactive. Saving selected artist to parentViewController %@", [artists objectAtIndex:[tableView selectedRow]]);
+        [(CLELibraryViewController*)partentViewController setCurrentArtist:[artists objectAtIndex:[tableView selectedRow]]];
+
+        // Push albumsViewController
         [partentViewController pushPreallocatedViewController:@"albumsViewController" animated:NO];
     }
 }
-
-- (void) viewWillAppear {
-    // reload foo
-}
-- (void) viewWillDisappear {
-    NSLog(@"artistview will disappera, saving current artist %@", [artists objectAtIndex:[tableView selectedRow]] );
-    [(CLELibraryViewController*)partentViewController setCurrentArtist:[artists objectAtIndex:[tableView selectedRow]]];
-}
-
-
 
 @end

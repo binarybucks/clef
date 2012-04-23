@@ -8,7 +8,7 @@
 #import "CLEViewController.h"
 
 @interface CLETitlesViewController : CLEViewController <NSTableViewDelegate, NSTableViewDataSource>{
-    IBOutlet NSButton *prev;
+    NSButton *prev;
     NSArray *songs;
     IBOutlet NSTableView *tableView;
 

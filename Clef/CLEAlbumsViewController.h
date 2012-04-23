@@ -8,13 +8,12 @@
 #import "CLEViewController.h"
 
 @interface CLEAlbumsViewController : CLEViewController <NSTableViewDelegate, NSTableViewDataSource>{
-    IBOutlet NSButton *next;
-    IBOutlet NSButton *prev;
+    NSButton *next;
+    NSButton *prev;
     NSArray *albums;
     IBOutlet NSTableView *tableView;
 
 }
-
 
 - (IBAction)next:(id)sender;
 - (IBAction)prev:(id)sender;
