@@ -107,6 +107,7 @@
                frame.origin.y + (frame.size.height-imageSize.height)/2.0,
                imageSize.width, 
                imageSize.height ); 
+    
     [image drawInRect:rect
                                       fromRect:NSZeroRect
                                      operation:NSCompositeSourceOver
@@ -134,7 +135,7 @@
     }
     
     NSImage *image = [self imageForSegment:segment];
-    [[NSGraphicsContext currentContext] setImageInterpolation: NSImageInterpolationHigh];
+    [[NSGraphicsContext currentContext] setImageInterpolation: NSImageInterpolationNone];
     [self drawCenteredImage:image inFrame:frame imageFraction:imageFraction];
 }
 

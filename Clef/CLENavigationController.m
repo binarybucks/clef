@@ -40,6 +40,7 @@
 - (void) prepareInitialViews {
     [super prepareInitialViews]; // Calls prepareInitialViews for all children
     [self showLibrary:nil];
+    [self showLibrary:nil];
 
 }
 
