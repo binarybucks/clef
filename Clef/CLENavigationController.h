@@ -13,10 +13,17 @@
     IBOutlet NSView *titleBarView;
     IBOutlet ANSegmentedControl *segment;
     
-    IBOutlet NSTextField *currentNavigationTitle;
-    IBOutlet NSTextField *previousNavigationTitle;
+    // IBOutlet NSTextField *currentNavigationTitle;
+    //IBOutlet NSButton *previousNavigationTitle;
+    
+    NSString *currentNavigationTitle;
+    NSString *previousNavigationTitle;
+    
 }
-- (void)showViewFromViewController:(NSString*)identifier;
+@property (strong) NSString *currentNavigationTitle;
+@property (strong) NSString *previousNavigationTitle;
+
+
 - (IBAction)showLibrary:(id)sender;
 - (IBAction)showPlaylist:(id)sender;
 - (IBAction)showQueue:(id)sender;

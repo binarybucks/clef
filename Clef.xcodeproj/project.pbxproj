@@ -11,6 +11,9 @@
 		1152369715336AA5000F25E4 /* NSNotification+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1152369615336AA5000F25E4 /* NSNotification+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		11544F801538A5D400C0529D /* CLEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11544F7F1538A5D400C0529D /* CLEViewController.m */; };
 		11544F831538A73400C0529D /* CLELibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11544F821538A73400C0529D /* CLELibraryViewController.m */; };
+		11634AA21546C6EB00C17176 /* titlebarArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 11634AA11546C6EB00C17176 /* titlebarArrow.png */; };
+		11634AA51546C98900C17176 /* TitleToIsEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 11634AA41546C98900C17176 /* TitleToIsEmpty.m */; };
+		11634AA71546CF0E00C17176 /* Music.png in Resources */ = {isa = PBXBuildFile; fileRef = 11634AA61546CF0E00C17176 /* Music.png */; };
 		1171920C15443576007302A0 /* ArtistsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1171920B15443576007302A0 /* ArtistsView.xib */; };
 		11719212154435DD007302A0 /* AlbumsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11719211154435DD007302A0 /* AlbumsView.xib */; };
 		1171921415443617007302A0 /* TitlesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1171921315443617007302A0 /* TitlesView.xib */; };
@@ -72,6 +75,10 @@
 		11544F7F1538A5D400C0529D /* CLEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLEViewController.m; sourceTree = "<group>"; };
 		11544F811538A73400C0529D /* CLELibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLELibraryViewController.h; sourceTree = "<group>"; };
 		11544F821538A73400C0529D /* CLELibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLELibraryViewController.m; sourceTree = "<group>"; };
+		11634AA11546C6EB00C17176 /* titlebarArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titlebarArrow.png; sourceTree = "<group>"; };
+		11634AA31546C98900C17176 /* TitleToIsEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleToIsEmpty.h; sourceTree = "<group>"; };
+		11634AA41546C98900C17176 /* TitleToIsEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleToIsEmpty.m; sourceTree = "<group>"; };
+		11634AA61546CF0E00C17176 /* Music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Music.png; sourceTree = "<group>"; };
 		1171920B15443576007302A0 /* ArtistsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistsView.xib; sourceTree = "<group>"; };
 		11719211154435DD007302A0 /* AlbumsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumsView.xib; sourceTree = "<group>"; };
 		1171921315443617007302A0 /* TitlesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitlesView.xib; sourceTree = "<group>"; };
@@ -180,6 +187,8 @@
 				11BA734B1545BA3D004F6199 /* StateToIsPaused.m */,
 				11BA734C1545BA3D004F6199 /* StateToIsPlaying.h */,
 				11BA734D1545BA3D004F6199 /* StateToIsPlaying.m */,
+				11634AA31546C98900C17176 /* TitleToIsEmpty.h */,
+				11634AA41546C98900C17176 /* TitleToIsEmpty.m */,
 			);
 			name = Transformers;
 			sourceTree = "<group>";
@@ -229,6 +238,7 @@
 		1152368F15336762000F25E4 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				11634A9F1546C6DF00C17176 /* Images */,
 				119A1BED1532EF4D007316AF /* Supporting Files */,
 			);
 			name = Ressources;
@@ -256,6 +266,15 @@
 				11BA733B1545B9E8004F6199 /* NSNumber+_BoolenNumberToText.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		11634A9F1546C6DF00C17176 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				11634AA61546CF0E00C17176 /* Music.png */,
+				11634AA11546C6EB00C17176 /* titlebarArrow.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		1171922215445BE3007302A0 /* Thirdparty */ = {
@@ -439,6 +458,8 @@
 				1171921415443617007302A0 /* TitlesView.xib in Resources */,
 				117192191544539A007302A0 /* QueueView.xib in Resources */,
 				1171921B154453A7007302A0 /* PlaylistView.xib in Resources */,
+				11634AA21546C6EB00C17176 /* titlebarArrow.png in Resources */,
+				11634AA71546CF0E00C17176 /* Music.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +525,7 @@
 				11BA734F1545BA3D004F6199 /* StateToIsNotPlaying.m in Sources */,
 				11BA73501545BA3D004F6199 /* StateToIsPaused.m in Sources */,
 				11BA73511545BA3D004F6199 /* StateToIsPlaying.m in Sources */,
+				11634AA51546C98900C17176 /* TitleToIsEmpty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

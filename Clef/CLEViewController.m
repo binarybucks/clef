@@ -112,6 +112,24 @@
     [newTopViewController didBecomeActive];
 }
 
+
+
+- (void)showViewController:(NSString*)identifier {
+    if ([activeChildViewController isEqualTo:[childViewControllers valueForKey:identifier]]) {
+        NSLog(@"Asked to show view that is already been shown. Doing nothing");
+        return;
+    }
+    
+    activeChildViewController = [childViewControllers valueForKey:identifier];
+    NSView *oldTopView = self.view.subviews.lastObject;
+        
+    [[activeChildViewController topView] setFrame:self.view.bounds ];
+    [self.view addSubview:[activeChildViewController topView]];
+    [oldTopView removeFromSuperview];
+}
+
+
+
 - (NSView*)topView {
     // If we have a stack, return view of topmost viewcontroller
     if ([childViewControllerStack count] > 0) {

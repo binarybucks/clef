@@ -12,6 +12,9 @@
 #import <Quartz/Quartz.h>
 @implementation CLENavigationController
 
+@synthesize currentNavigationTitle;
+@synthesize previousNavigationTitle;
+
 
 // Instantiates all mayor viewcontrollers that then take care of instantiating their childcontrollers
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -22,28 +25,17 @@
         [childViewControllers setValue:[[CLELibraryViewController alloc] initWithNibName:nil bundle:nil parentViewController:self] forKey:@"libraryViewController"];
         [childViewControllers setValue:[[CLEQueueViewController alloc] initWithNibName:@"QueueView" bundle:nil parentViewController:self] forKey:@"queueViewController"];
         [childViewControllers setValue:[[CLEPlaybackViewController alloc] initWithNibName:@"PlaylistView" bundle:nil parentViewController:self] forKey:@"playlistViewController"];
+        [self setValue:@"" forKey:@"previousNavigationTitle"];
     }
     
     return self;
 }
-
-- (void)showViewFromViewController:(NSString*)identifier {
-    CLEViewController *newTopViewController = [childViewControllers valueForKey:identifier];
-    NSView *oldTopView = self.view.subviews.lastObject;
-
-    if ([oldTopView isEqual:[newTopViewController topView]]) {
-        NSLog(@"Asked to show view that is already been shown. Doing nothing");
-        return;
-    }
-
-    [currentNavigationTitle setStringValue:@"foo"];
+- (void)showViewController:(NSString*)identifier {
+    [super showViewController:identifier];
     
-    [[newTopViewController topView] setFrame:self.view.bounds ];
-    [self.view addSubview:[newTopViewController topView]];
-    [oldTopView removeFromSuperview];
-    
-    [self newTitle:[newTopViewController title] previousTitle:[newTopViewController previousTitle]];
+    [self newTitle:[activeChildViewController title] previousTitle:[activeChildViewController previousTitle]];
 }
+
 
 - (void) prepareInitialViews {
     [super prepareInitialViews]; // Calls prepareInitialViews for all children
@@ -55,23 +47,19 @@
     return self.view;
 }
 
-- (IBAction)goBack:(id)sender {
-    
-}
-
 - (IBAction)showLibrary:(id)sender {
     NSLog(@"Showing library");
-    [self showViewFromViewController:@"libraryViewController"];
+    [self  showViewController:@"libraryViewController"];
     [segment setSelectedSegment:0];
 }
 - (IBAction)showPlaylist:(id)sender {
     NSLog(@"Showing playlist");
-    [self showViewFromViewController:@"playlistViewController"];
+    [self showViewController:@"playlistViewController"];
     [segment setSelectedSegment:1];
 }
 - (IBAction)showQueue:(id)sender {
     NSLog(@"Showing lqueue");
-    [self showViewFromViewController:@"queueViewController"];
+    [self showViewController:@"queueViewController"];
     [segment setSelectedSegment:2];
 }
 
@@ -90,14 +78,17 @@
     }
 }
 
-- (void)newTitle:(NSString*)newTitle {
-    [currentNavigationTitle setStringValue:newTitle];
-    [previousNavigationTitle setStringValue:@""];
-
+- (IBAction)goBack:(id)sender {
+    [activeChildViewController popViewControllerAnimated:YES];
 }
+
+- (void)newTitle:(NSString*)newTitle {
+    [self newTitle:newTitle previousTitle:@""];
+}
+
 - (void)newTitle:(NSString*)newTitle previousTitle:(NSString*)previousTitle {
-    [currentNavigationTitle setStringValue:newTitle];
-    [previousNavigationTitle setStringValue:previousTitle];
+    [self setValue:newTitle forKey:@"currentNavigationTitle"];
+    [self setValue:previousTitle forKey:@"previousNavigationTitle"];
 }
 
 
