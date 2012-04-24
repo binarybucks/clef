@@ -7,11 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <Quartz/Quartz.h>
 
 @interface CLEViewController : NSViewController {
-    CLEViewController *partentViewController;
-    NSMutableArray *childViewControllerStack;
+    CLEViewController   *partentViewController;
+    NSMutableArray      *childViewControllerStack;
     NSMutableDictionary *childViewControllers;
+    
+    CATransition *pushAnimation;
+    CATransition *popAnimation;
+
 }
 
 @property (strong)NSViewController *partentViewController;
@@ -30,5 +35,10 @@
 
 - (NSView*)topView;         // Returns view of viewController that is ontop of the stack
 - (NSView*)parentView;      // Returns view of the parentViewController if this is the root controller or cascades to the root controller
+
+- (NSString*)title;
+- (NSString*)previousTitle;
+
+
 
 @end

@@ -61,7 +61,9 @@
 										<int key="NSvFlags">256</int>
 										<string key="NSFrameSize">{529, 272}</string>
 										<reference key="NSSuperview" ref="739042311"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="100197337"/>
+										<int key="NSViewLayerContentsRedrawPolicy">2</int>
 										<string key="NSReuseIdentifierKey">_NS:1828</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="_NSCornerView" key="NSCornerView">
@@ -168,7 +170,9 @@
 								</object>
 								<string key="NSFrameSize">{492, 272}</string>
 								<reference key="NSSuperview" ref="343838426"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="156410265"/>
+								<int key="NSViewLayerContentsRedrawPolicy">2</int>
 								<string key="NSReuseIdentifierKey">_NS:1826</string>
 								<reference key="NSDocView" ref="156410265"/>
 								<reference key="NSBGColor" ref="616117307"/>
@@ -179,6 +183,7 @@
 								<int key="NSvFlags">-2147483392</int>
 								<string key="NSFrame">{{224, 17}, {15, 102}}</string>
 								<reference key="NSSuperview" ref="343838426"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="615568627"/>
 								<string key="NSReuseIdentifierKey">_NS:1845</string>
 								<reference key="NSTarget" ref="343838426"/>
@@ -190,6 +195,7 @@
 								<int key="NSvFlags">256</int>
 								<string key="NSFrame">{{0, 257}, {492, 15}}</string>
 								<reference key="NSSuperview" ref="343838426"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:1847</string>
 								<bool key="NSEnabled">YES</bool>
@@ -201,7 +207,9 @@
 						</object>
 						<string key="NSFrameSize">{492, 272}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="739042311"/>
+						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<string key="NSReuseIdentifierKey">_NS:1824</string>
 						<int key="NSsFlags">133808</int>
 						<reference key="NSVScroller" ref="985117708"/>
@@ -212,7 +220,9 @@
 				</object>
 				<string key="NSFrameSize">{492, 272}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="343838426"/>
+				<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				<string key="NSClassName">NSView</string>
 			</object>
 		</object>
@@ -265,6 +275,7 @@
 									<string key="NSFrame">{{-2, 12}, {489, 17}}</string>
 									<reference key="NSSuperview" ref="100197337"/>
 									<reference key="NSNextKeyView" ref="985117708"/>
+									<int key="NSViewLayerContentsRedrawPolicy">2</int>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSTextFieldCell" key="NSCell" id="697386266">
 										<int key="NSCellFlags">67239488</int>
@@ -288,6 +299,7 @@
 							</object>
 							<string key="NSFrame">{{20, 0}, {489, 40}}</string>
 							<reference key="NSNextKeyView" ref="623380496"/>
+							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						</object>
 						<reference key="destination" ref="623380496"/>
 					</object>
@@ -462,7 +474,57 @@
 			<nil key="sourceID"/>
 			<int key="maxID">30</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">CLEArtistsViewController</string>
+					<string key="superclassName">CLEViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">next:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">next:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">next:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">tableView</string>
+						<string key="NS.object.0">NSTableView</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">tableView</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">tableView</string>
+							<string key="candidateClassName">NSTableView</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/CLEArtistsViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">CLETableView</string>
+					<string key="superclassName">NSTableView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/CLETableView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">CLEViewController</string>
+					<string key="superclassName">NSViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/CLEViewController.h</string>
+					</object>
+				</object>
+			</object>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">

@@ -9,7 +9,7 @@
 #import "CLELibraryViewController.h"
 #import "CLEQueueViewController.h"
 #import "CLEPlaybackViewController.h"
-
+#import <Quartz/Quartz.h>
 @implementation CLENavigationController
 
 
@@ -36,20 +36,28 @@
         return;
     }
 
+    [currentNavigationTitle setStringValue:@"foo"];
+    
     [[newTopViewController topView] setFrame:self.view.bounds ];
     [self.view addSubview:[newTopViewController topView]];
     [oldTopView removeFromSuperview];
+    
+    [self newTitle:[newTopViewController title] previousTitle:[newTopViewController previousTitle]];
 }
 
 - (void) prepareInitialViews {
     [super prepareInitialViews]; // Calls prepareInitialViews for all children
     [self showLibrary:nil];
+
 }
 
 - (NSView*)parentView {
     return self.view;
 }
 
+- (IBAction)goBack:(id)sender {
+    
+}
 
 - (IBAction)showLibrary:(id)sender {
     NSLog(@"Showing library");
@@ -81,4 +89,17 @@
             break;
     }
 }
+
+- (void)newTitle:(NSString*)newTitle {
+    [currentNavigationTitle setStringValue:newTitle];
+    [previousNavigationTitle setStringValue:@""];
+
+}
+- (void)newTitle:(NSString*)newTitle previousTitle:(NSString*)previousTitle {
+    [currentNavigationTitle setStringValue:newTitle];
+    [previousNavigationTitle setStringValue:previousTitle];
+}
+
+
+
 @end

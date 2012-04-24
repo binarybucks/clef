@@ -18,10 +18,6 @@
     [(CLELibraryViewController*)self.partentViewController popViewControllerAnimated:NO];
 }
 
-- (IBAction)next:(id)sender {
-    [(CLELibraryViewController*)self.partentViewController pushPreallocatedViewController:@"titlesViewController" animated:NO];
-}
-
 - (void) willBecomeActive {
     
     NSLog(@"AlbumsView will become active. Geting selected artist from parentViewController %@", [(CLELibraryViewController*)partentViewController currentArtist]);
@@ -86,7 +82,15 @@
     }
 }
 
+- (NSString*)title { 
+    return [[(CLELibraryViewController*)partentViewController currentArtist] name];
+};
 
+
+// We could check the stack here, but this is just a slow prototype anyway
+- (NSString*)previousTitle { 
+    return @"Artists";
+}
 
 
 

@@ -32,6 +32,24 @@
     if (self) {
         childViewControllers = [[NSMutableDictionary alloc] init];
         childViewControllerStack = [NSMutableArray array];
+        
+        
+        
+         pushAnimation = [CATransition animation];
+        [pushAnimation setDuration:0.25];
+        [pushAnimation setType:kCATransitionPush];
+        [pushAnimation setSubtype:kCATransitionFromRight];
+        [pushAnimation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+        [pushAnimation setDelegate:self];
+
+        
+        popAnimation = [CATransition animation];
+        [popAnimation setDuration:0.25];
+        [popAnimation setType:kCATransitionPush];
+        [popAnimation setSubtype:kCATransitionFromLeft];
+        [popAnimation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+        [popAnimation setDelegate:self];
+        
     }
     
     return self;
@@ -47,9 +65,17 @@
     [newTopViewController willBecomeActive];
 
     newTopViewController.view.frame = [[self parentView] bounds];
-    [[self parentView]  addSubview:newTopViewController.view];
-    [[oldTopViewController view] removeFromSuperview];
-
+    
+    if ([[[self parentView] subviews]count] ) {
+    
+       [[[self parentView] layer] addAnimation:pushAnimation forKey:kCAOnOrderIn];
+       [[self parentView]  addSubview:newTopViewController.view];
+       [[oldTopViewController view] removeFromSuperview];
+        
+    } else {
+        [[self parentView]  addSubview:newTopViewController.view];
+    }
+    
     [oldTopViewController didBecomeInactive];
     [newTopViewController didBecomeActive];
 }
@@ -71,8 +97,15 @@
     [newTopViewController willBecomeActive];
     
     newTopViewController.view.frame = [[self parentView] bounds];
+    
+
+    
+    [[[self parentView] layer] addAnimation:popAnimation forKey:kCAOnOrderIn];
     [[self parentView] addSubview:newTopViewController.view];
     [oldTopViewController.view removeFromSuperview];
+    
+    
+    
     [childViewControllerStack removeLastObject];
     
     [oldTopViewController didBecomeInactive];
@@ -103,6 +136,10 @@
         [child prepareInitialViews];
     }
 }
+
+- (NSString*)title {return @"overwrite me";};
+- (NSString*)previousTitle { return @"overwrite me";};
+
 
 // Up to subclasses to implement those actions that are called during push and pop
 - (void) willBecomeActive {};

@@ -9,4 +9,12 @@
 
 @implementation CLEPlaylistViewController
 
+- (NSString*)title { 
+    return @"Playlists";
+};
+
+- (NSString*)previousTitle { 
+    return @"";
+}
+
 @end

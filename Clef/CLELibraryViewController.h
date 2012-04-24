@@ -11,18 +11,17 @@
 #import "CLETitlesViewController.h"
 #import "CLEAlbum.h"
 #import "CLEArtist.h"
+#import "CLENavigationController.h"
 
 @interface CLELibraryViewController : CLEViewController {
     NSDictionary *artists;
-    
+    IBOutlet CLENavigationController *navigationController;
     CLEArtist *currentArtist;
     CLEAlbum *currentAlbum;
 }
 
 @property (strong) CLEArtist *currentArtist;
 @property (strong) CLEAlbum *currentAlbum;
-
-@property (strong) NSDictionary *artists;
 
 - (void)handleFetchedLibrary;
 

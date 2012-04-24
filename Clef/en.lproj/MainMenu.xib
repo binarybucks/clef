@@ -11,11 +11,13 @@
 			<string key="NS.object.0">1938</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
+			<string>NSTextField</string>
 			<string>NSSegmentedControl</string>
 			<string>NSMenuItem</string>
 			<string>NSMenu</string>
 			<string>NSButtonCell</string>
 			<string>NSButton</string>
+			<string>NSTextFieldCell</string>
 			<string>NSSlider</string>
 			<string>NSSliderCell</string>
 			<string>NSCustomView</string>
@@ -1306,7 +1308,7 @@
 				<string key="NSWindowClass">INAppStoreWindow</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
-				<string key="NSWindowContentMinSize">{403, 150}</string>
+				<string key="NSWindowContentMinSize">{635, 350}</string>
 				<object class="NSView" key="NSWindowView" id="439893737">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
@@ -1551,6 +1553,8 @@
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="129538822"/>
+							<bool key="NSViewIsLayerTreeHost">YES</bool>
+							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<string key="NSReuseIdentifierKey">_NS:1192</string>
 							<string key="NSClassName">NSView</string>
 						</object>
@@ -1561,7 +1565,7 @@
 					<reference key="NSNextKeyView" ref="392988151"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
-				<string key="NSMinSize">{403, 172}</string>
+				<string key="NSMinSize">{635, 372}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSAutorecalculatesContentBorderThicknessMinY">NO</bool>
 				<double key="NSContentBorderThicknessMinY">40</double>
@@ -1593,6 +1597,7 @@
 						<reference key="NSSuperview" ref="375098315"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
+						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<string key="NSReuseIdentifierKey">_NS:2177</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSSegmentedCell" key="NSCell" id="296089896">
@@ -1639,11 +1644,95 @@
 							<int key="NSSegmentStyle">1</int>
 						</object>
 					</object>
+					<object class="NSTextField" id="697130116">
+						<reference key="NSNextResponder" ref="375098315"/>
+						<int key="NSvFlags">258</int>
+						<string key="NSFrame">{{212, 12}, {211, 17}}</string>
+						<reference key="NSSuperview" ref="375098315"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="405816623"/>
+						<object class="NSShadow" key="NSViewShadow">
+							<double key="NSShadowVert">-1</double>
+							<object class="NSColor" key="NSShadowColor" id="749768389">
+								<int key="NSColorSpace">1</int>
+								<bytes key="NSRGB">MSAxIDEAA</bytes>
+							</object>
+						</object>
+						<object class="NSDictionary" key="NSViewAnimations">
+							<string key="NS.key.0">subviews</string>
+							<object class="CATransition" key="NS.object.0">
+								<string key="type">fade</string>
+								<array key="__CACodingContents">
+									<string>type</string>
+								</array>
+							</object>
+						</object>
+						<int key="NSViewLayerContentsRedrawPolicy">2</int>
+						<string key="NSReuseIdentifierKey">_NS:3944</string>
+						<bool key="NSEnabled">YES</bool>
+						<object class="NSTextFieldCell" key="NSCell" id="371818622">
+							<int key="NSCellFlags">68288064</int>
+							<int key="NSCellFlags2">138413056</int>
+							<string key="NSContents">Label</string>
+							<reference key="NSSupport" ref="1063330468"/>
+							<string key="NSCellIdentifier">_NS:3944</string>
+							<reference key="NSControlView" ref="697130116"/>
+							<object class="NSColor" key="NSBackgroundColor" id="852751078">
+								<int key="NSColorSpace">6</int>
+								<string key="NSCatalogName">System</string>
+								<string key="NSColorName">controlColor</string>
+								<object class="NSColor" key="NSColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
+								</object>
+							</object>
+							<object class="NSColor" key="NSTextColor" id="983775681">
+								<int key="NSColorSpace">6</int>
+								<string key="NSCatalogName">System</string>
+								<string key="NSColorName">windowFrameTextColor</string>
+								<object class="NSColor" key="NSColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MQA</bytes>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="NSTextField" id="537447928">
+						<reference key="NSNextResponder" ref="375098315"/>
+						<int key="NSvFlags">262</int>
+						<string key="NSFrame">{{81, 13}, {129, 14}}</string>
+						<reference key="NSSuperview" ref="375098315"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
+						<object class="NSShadow" key="NSViewShadow">
+							<double key="NSShadowVert">-1</double>
+							<reference key="NSShadowColor" ref="749768389"/>
+						</object>
+						<int key="NSViewLayerContentsRedrawPolicy">2</int>
+						<string key="NSReuseIdentifierKey">_NS:3944</string>
+						<bool key="NSEnabled">YES</bool>
+						<object class="NSTextFieldCell" key="NSCell" id="978993208">
+							<int key="NSCellFlags">68288064</int>
+							<int key="NSCellFlags2">4359168</int>
+							<string key="NSContents">Label</string>
+							<object class="NSFont" key="NSSupport">
+								<string key="NSName">LucidaGrande</string>
+								<double key="NSSize">11</double>
+								<int key="NSfFlags">3100</int>
+							</object>
+							<string key="NSCellIdentifier">_NS:3944</string>
+							<reference key="NSControlView" ref="537447928"/>
+							<reference key="NSBackgroundColor" ref="852751078"/>
+							<reference key="NSTextColor" ref="983775681"/>
+						</object>
+					</object>
 				</array>
 				<string key="NSFrameSize">{635, 40}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="405816623"/>
+				<reference key="NSNextKeyView"/>
+				<bool key="NSViewIsLayerTreeHost">YES</bool>
+				<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				<string key="NSReuseIdentifierKey">_NS:1192</string>
 				<string key="NSClassName">NSView</string>
 			</object>
@@ -2513,6 +2602,22 @@
 						<reference key="destination" ref="405816623"/>
 					</object>
 					<int key="connectionID">846</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">previousNavigationTitle</string>
+						<reference key="source" ref="527293596"/>
+						<reference key="destination" ref="537447928"/>
+					</object>
+					<int key="connectionID">854</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">currentNavigationTitle</string>
+						<reference key="source" ref="527293596"/>
+						<reference key="destination" ref="697130116"/>
+					</object>
+					<int key="connectionID">853</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3647,6 +3752,8 @@
 						<reference key="object" ref="375098315"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="405816623"/>
+							<reference ref="537447928"/>
+							<reference ref="697130116"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -3662,6 +3769,32 @@
 						<int key="objectID">842</int>
 						<reference key="object" ref="296089896"/>
 						<reference key="parent" ref="405816623"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">851</int>
+						<reference key="object" ref="537447928"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="978993208"/>
+						</array>
+						<reference key="parent" ref="375098315"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">852</int>
+						<reference key="object" ref="978993208"/>
+						<reference key="parent" ref="537447928"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">849</int>
+						<reference key="object" ref="697130116"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="371818622"/>
+						</array>
+						<reference key="parent" ref="375098315"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">850</int>
+						<reference key="object" ref="371818622"/>
+						<reference key="parent" ref="697130116"/>
 					</object>
 				</array>
 			</object>
@@ -3838,6 +3971,7 @@
 				<string key="81.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="817.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="82.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="822.IBCATransitionLastKnownSubtype">fromRight</string>
 				<string key="822.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="825.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="83.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3845,13 +3979,23 @@
 				<string key="841.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="842.IBNSSegmentedControlInspectorSelectedSegmentMetadataKey"/>
 				<string key="842.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="849.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<reference key="849.IBViewIntegration.shadowColor" ref="749768389"/>
+				<real value="-1" key="849.IBViewIntegration.shadowOffsetHeight"/>
+				<string key="850.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="851.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<real value="0.0" key="851.IBViewIntegration.shadowBlurRadius"/>
+				<reference key="851.IBViewIntegration.shadowColor" ref="749768389"/>
+				<real value="-1" key="851.IBViewIntegration.shadowOffsetHeight"/>
+				<real value="0.0" key="851.IBViewIntegration.shadowOffsetWidth"/>
+				<string key="852.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="92.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">846</int>
+			<int key="maxID">854</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3937,10 +4081,20 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="currentNavigationTitle">NSTextField</string>
+						<string key="previousNavigationTitle">NSTextField</string>
 						<string key="segment">ANSegmentedControl</string>
 						<string key="titleBarView">NSView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="currentNavigationTitle">
+							<string key="name">currentNavigationTitle</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="previousNavigationTitle">
+							<string key="name">previousNavigationTitle</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="segment">
 							<string key="name">segment</string>
 							<string key="candidateClassName">ANSegmentedControl</string>

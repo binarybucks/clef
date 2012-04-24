@@ -9,4 +9,12 @@
 
 @implementation CLEQueueViewController
 
+- (NSString*)title { 
+    return @"Playback queue";
+};
+
+- (NSString*)previousTitle { 
+    return @"";
+}
+
 @end

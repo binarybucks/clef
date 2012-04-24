@@ -71,4 +71,15 @@
     }
 }
 
+- (NSString*)title { 
+    return @"Artists";
+};
+
+
+
+- (NSString*)previousTitle { 
+    return @"";
+}
+
+
 @end

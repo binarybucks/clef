@@ -52,4 +52,14 @@
     return result;
 }
 
+- (NSString*)title { 
+    return [[(CLELibraryViewController*)partentViewController currentAlbum] title];
+};
+
+
+// We could check the stack here, but this is just a slow prototype anyway
+- (NSString*)previousTitle { 
+    return [[(CLELibraryViewController*)partentViewController currentArtist] name];
+}
+
 @end

@@ -6,6 +6,7 @@
 //
 
 #import "CLELibraryViewController.h"
+#import "CLENavigationController.h"
 #import "CLEAppDelegate.h"
 #import "CLEAppDelegate.h"
 
@@ -27,6 +28,19 @@
     return self;
 }
 
+
+// Catches push calls and sets title of main window accordingly. This is yet a quick and diry proof-of-concept and needs to be streamlined
+- (void)pushPreallocatedViewController:(NSString*)identifier animated:(BOOL) animated {
+    [super pushPreallocatedViewController:identifier animated:animated];
+    [(CLENavigationController*)partentViewController newTitle:[self title] previousTitle:[self previousTitle]];
+}
+
+- (void)popViewControllerAnimated:(BOOL)animated {
+    [super popViewControllerAnimated:animated];
+    [(CLENavigationController*)partentViewController newTitle:[self title] previousTitle:[self previousTitle]];
+}
+
+
 - (void)handleFetchedLibrary {
     NSLog(@"Handling fetched library");
     //[self setValue:[[(CLEAppDelegate*)[NSApp delegate] mpdServer] artists] forKey:@"artists"];
@@ -42,4 +56,16 @@
 - (NSView*)view {
     return [self topView];
 }
+
+
+- (NSString*)title { 
+    return [[childViewControllerStack lastObject] title];
+};
+
+
+
+- (NSString*)previousTitle { 
+    return [[childViewControllerStack lastObject] previousTitle];
+}
+
 @end

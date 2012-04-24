@@ -42,6 +42,7 @@
 		11BA734F1545BA3D004F6199 /* StateToIsNotPlaying.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BA73491545BA3D004F6199 /* StateToIsNotPlaying.m */; };
 		11BA73501545BA3D004F6199 /* StateToIsPaused.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BA734B1545BA3D004F6199 /* StateToIsPaused.m */; };
 		11BA73511545BA3D004F6199 /* StateToIsPlaying.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BA734D1545BA3D004F6199 /* StateToIsPlaying.m */; };
+		11BA73561545E080004F6199 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11BA73551545E07E004F6199 /* QuartzCore.framework */; };
 		11C370F7153F5ECC00824EAE /* CLEArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C370F6153F5ECC00824EAE /* CLEArtist.m */; };
 		11C370FB153F5EDB00824EAE /* CLEAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C370FA153F5EDB00824EAE /* CLEAlbum.m */; };
 		11C3710415402A7400824EAE /* CLEAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C3710315402A7400824EAE /* CLEAlbumsViewController.m */; };
@@ -128,6 +129,7 @@
 		11BA734B1545BA3D004F6199 /* StateToIsPaused.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateToIsPaused.m; sourceTree = "<group>"; };
 		11BA734C1545BA3D004F6199 /* StateToIsPlaying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateToIsPlaying.h; sourceTree = "<group>"; };
 		11BA734D1545BA3D004F6199 /* StateToIsPlaying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateToIsPlaying.m; sourceTree = "<group>"; };
+		11BA73551545E07E004F6199 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		11C370F5153F5ECC00824EAE /* CLEArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEArtist.h; sourceTree = "<group>"; };
 		11C370F6153F5ECC00824EAE /* CLEArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLEArtist.m; sourceTree = "<group>"; };
 		11C370F9153F5EDB00824EAE /* CLEAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEAlbum.h; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11BA73561545E080004F6199 /* QuartzCore.framework in Frameworks */,
 				11F436121544277F00C97235 /* libmpdclient.2.dylib in Frameworks */,
 				119A1BE71532EF4D007316AF /* Cocoa.framework in Frameworks */,
 			);
@@ -275,6 +278,7 @@
 		119A1BD71532EF4D007316AF = {
 			isa = PBXGroup;
 			children = (
+				11BA73551545E07E004F6199 /* QuartzCore.framework */,
 				119A1BEC1532EF4D007316AF /* Clef */,
 				119A1BE51532EF4D007316AF /* Frameworks */,
 				119A1BE31532EF4D007316AF /* Products */,
